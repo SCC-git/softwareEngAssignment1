@@ -19,4 +19,36 @@ public class Module {
         this.registeredStudents = registeredStudents;
         this.associatedCourses = associatedCourses;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public ArrayList<Student> getRegisteredStudents() {
+        return registeredStudents;
+    }
+
+    public void setRegisteredStudents(ArrayList<Student> registeredStudents) {
+        this.registeredStudents = registeredStudents;
+    }
+
+    public ArrayList<CourseProgramme> getAssociatedCourses() {
+        return associatedCourses;
+    }
+
+    public void setAssociatedCourses(ArrayList<CourseProgramme> associatedCourses) {
+        this.associatedCourses = associatedCourses;
+    }
 }

@@ -10,7 +10,7 @@ public class StudentTest {
 
     @Test
     public void testGetUsername_returnsUsername() {
-        ArrayList<Module> testModules = new ArrayList<Module>();
+        ArrayList<Module> testModules = new ArrayList<>();
         testModules.add(new Module("Software Engineering III", "CT417"));
         testModules.add(new Module("Machine Learning", "CT4101"));
         testModules.add(new Module("Digital Signal Processing", "EE445"));

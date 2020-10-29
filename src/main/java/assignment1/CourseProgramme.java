@@ -18,4 +18,44 @@ public class CourseProgramme {
         this.startDate = startDate;
         this.endDate = endDate;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<Module> getAssociatedModules() {
+        return associatedModules;
+    }
+
+    public void setAssociatedModules(ArrayList<Module> associatedModules) {
+        this.associatedModules = associatedModules;
+    }
+
+    public ArrayList<Student> getAssociatedStudents() {
+        return associatedStudents;
+    }
+
+    public void setAssociatedStudents(ArrayList<Student> associatedStudents) {
+        this.associatedStudents = associatedStudents;
+    }
+
+    public DateTime getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(DateTime startDate) {
+        this.startDate = startDate;
+    }
+
+    public DateTime getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(DateTime endDate) {
+        this.endDate = endDate;
+    }
 }

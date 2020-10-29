@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+
+import assignment1.Module;
+import assignment1.Student;
 import org.junit.Test;
 
 public class StudentTest {

@@ -4,19 +4,14 @@ import static org.junit.Assert.assertEquals;
 
 import assignment1.Module;
 import assignment1.Student;
+import org.joda.time.DateTime;
 import org.junit.Test;
 
 public class StudentTest {
 
     @Test
     public void testGetUsername_returnsUsername() {
-        ArrayList<Module> testModules = new ArrayList<>();
-        testModules.add(new Module("Software Engineering III", "CT417"));
-        testModules.add(new Module("Machine Learning", "CT4101"));
-        testModules.add(new Module("Digital Signal Processing", "EE445"));
-        testModules.add(new Module("Real Time Systems", "CT420"));
-
-        Student testStudent = new Student("Doug Dimmadome", 34, 16561983, testModules);
+        Student testStudent = new Student("Doug Dimmadome", 34, new DateTime(1986, 1,1, 0, 0), 15443451);
 
         String expectedUsername = "DougDimmadome34";
 

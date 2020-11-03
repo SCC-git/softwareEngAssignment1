@@ -5,19 +5,16 @@ import java.util.ArrayList;
 public class Module {
     private String name;
     private String id;
-    private ArrayList<Student> registeredStudents;
-    private ArrayList<CourseProgramme> associatedCourses;
+    private ArrayList<Student> students;
+    private ArrayList<String> courses;
 
-    public Module(String name, String id) {
+    public Module(String name, String id, ArrayList<Student> students) {
         this.name = name;
         this.id = id;
-    }
-
-    public Module(String name, String id, ArrayList<Student> registeredStudents, ArrayList<CourseProgramme> associatedCourses) {
-        this.name = name;
-        this.id = id;
-        this.registeredStudents = registeredStudents;
-        this.associatedCourses = associatedCourses;
+        this.students = students;
+        for (Student student : students) {
+            student.getModules().add(this.toString());
+        }
     }
 
     public String getName() {
@@ -36,19 +33,27 @@ public class Module {
         this.id = id;
     }
 
-    public ArrayList<Student> getRegisteredStudents() {
-        return registeredStudents;
+    public ArrayList<Student> getStudents() {
+        return students;
     }
 
-    public void setRegisteredStudents(ArrayList<Student> registeredStudents) {
-        this.registeredStudents = registeredStudents;
+    public void setStudents(ArrayList<Student> students) {
+        this.students = students;
+        for (Student student : students) {
+            student.getModules().add(this.toString());
+        }
     }
 
-    public ArrayList<CourseProgramme> getAssociatedCourses() {
-        return associatedCourses;
+    public ArrayList<String> getCourses() {
+        return courses;
     }
 
-    public void setAssociatedCourses(ArrayList<CourseProgramme> associatedCourses) {
-        this.associatedCourses = associatedCourses;
+    public void setCourses(ArrayList<String> courses) {
+        this.courses = courses;
+    }
+
+    @Override
+    public String toString() {
+        return id + "\t" + name;
     }
 }

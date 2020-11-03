@@ -1,5 +1,7 @@
 package assignment1;
 
+import org.joda.time.DateTime;
+
 import java.util.ArrayList;
 
 public class Student {
@@ -7,14 +9,15 @@ public class Student {
     private String name;
     private int age;
     private long id;
-    private ArrayList<CourseProgramme> courses;
-    private ArrayList<Module> modules;
+    private DateTime dateOfBirth;
+    private ArrayList<String> courses;
+    private ArrayList<String> modules;
 
-    public Student(String name, int age, long id, ArrayList<Module> modules) {
+    public Student(String name, int age, DateTime dateOfBirth, long id) {
         this.name = name;
         this.age = age;
+        this.dateOfBirth = dateOfBirth;
         this.id = id;
-        this.modules = modules;
     }
 
     public String getUsername() {
@@ -45,19 +48,32 @@ public class Student {
         this.id = id;
     }
 
-    public ArrayList<CourseProgramme> getCourses() {
+    public DateTime getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(DateTime dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public ArrayList<String> getCourses() {
         return courses;
     }
 
-    public void setCourses(ArrayList<CourseProgramme> courses) {
+    public void setCourses(ArrayList<String> courses) {
         this.courses = courses;
     }
 
-    public ArrayList<Module> getModules() {
+    public ArrayList<String> getModules() {
         return modules;
     }
 
-    public void setModules(ArrayList<Module> modules) {
+    public void setModules(ArrayList<String> modules) {
         this.modules = modules;
+    }
+
+    @Override
+    public String toString() {
+        return id + "\t" + name;
     }
 }

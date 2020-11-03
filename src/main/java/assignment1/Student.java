@@ -10,8 +10,8 @@ public class Student {
     private int age;
     private long id;
     private DateTime dateOfBirth;
-    private ArrayList<String> courses;
-    private ArrayList<String> modules;
+    private ArrayList<String> courses = new ArrayList<>();
+    private ArrayList<String> modules = new ArrayList<>();
 
     public Student(String name, int age, DateTime dateOfBirth, long id) {
         this.name = name;

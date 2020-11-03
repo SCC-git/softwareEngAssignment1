@@ -21,7 +21,7 @@ public class Student {
     }
 
     public String getUsername() {
-        return (name+age).replaceAll("\\s+", "");
+        return "incorrect";
     }
 
     public String getName() {

@@ -1,8 +1,5 @@
-import java.util.ArrayList;
-
 import static org.junit.Assert.assertEquals;
 
-import assignment1.Module;
 import assignment1.Student;
 import org.joda.time.DateTime;
 import org.junit.Test;

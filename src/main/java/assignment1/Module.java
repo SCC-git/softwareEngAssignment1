@@ -54,6 +54,6 @@ public class Module {
 
     @Override
     public String toString() {
-        return id + "\t" + name;
+        return String.format("%-7s %-20s", id, name);
     }
 }

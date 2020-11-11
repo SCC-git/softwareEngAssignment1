@@ -41,7 +41,9 @@ public class CourseProgramme {
     public void setModules(ArrayList<Module> modules) {
         this.modules = modules;
         for(Module module : modules) {
-            module.getCourses().add(this.toString());
+            if (!module.getCourses().contains(this.toString())) {
+                module.getCourses().add(this.toString());
+            }
         }
     }
 
@@ -52,7 +54,9 @@ public class CourseProgramme {
     public void setStudents(ArrayList<Student> students) {
         this.students = students;
         for (Student student : students) {
-            student.getCourses().add(this.toString());
+            if(!student.getCourses().contains(this.toString())) {
+                student.getCourses().add(this.toString());
+            }
         }
     }
 

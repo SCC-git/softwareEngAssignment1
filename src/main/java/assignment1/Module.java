@@ -40,7 +40,9 @@ public class Module {
     public void setStudents(ArrayList<Student> students) {
         this.students = students;
         for (Student student : students) {
-            student.getModules().add(this.toString());
+            if(!student.getModules().contains(this.toString())) {
+                student.getModules().add(this.toString());
+            }
         }
     }
 
